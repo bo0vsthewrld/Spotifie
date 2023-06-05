@@ -178,7 +178,7 @@ if ($psv -ge 7) {
 function CallLang($clg) {
 
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-    $urlLang = "https://raw.githubusercontent.com/amd64fox/SpotX/main/scripts/installer-lang/$clg.ps1"
+    $urlLang = "https://raw.githubusercontent.com/bo0vsthewrld/Spotifie/main/scripts/installer-lang/$clg.ps1"
     $ProgressPreference = 'SilentlyContinue'
     
     try {
@@ -200,7 +200,7 @@ $lang = CallLang -clg $langCode
 # Set variable 'vi'.
 if ($langCode -eq 'vi') { 
     $vi = $true
-    $urlvi = "https://raw.githubusercontent.com/amd64fox/SpotX/main/patches/Augmented%20translation/vi.json"
+    $urlvi = "https://raw.githubusercontent.com/bo0vsthewrld/Spotifie/main/patches/Augmented%20translation/vi.json"
     $webjsonvi = (Invoke-WebRequest -useb -Uri $urlvi).Content | ConvertFrom-Json
 }
 
@@ -209,7 +209,7 @@ Write-Host ""
 
 # Sending a statistical web query to cutt.ly
 $ErrorActionPreference = 'SilentlyContinue'
-$cutt_url = "https://cutt.ly/DK8UQub" # edit later
+$cutt_url = "https://cutt.ly/hwwKyvNV" # edit later
 try {
     $ProgressPreference = 'SilentlyContinue'
     Invoke-WebRequest -useb -Uri $cutt_url | Out-Null
